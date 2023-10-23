@@ -1,0 +1,101 @@
+/* Estilos gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Barra de navegação */
+header {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 20px;
+}
+
+.name-container {
+  text-align: center;
+  margin-left: 60px;
+}
+
+
+.name {
+  font-size: 20px;
+  font-family: 'Stratos', sans-serif;
+  font-weight: 900;
+}
+
+.subtitle {
+  font-family: 'Stratos', sans-serif;
+  font-size: 12px;
+  font-style: italic;
+}
+
+.nav-links {
+  font-size: 18px;
+  font-family: 'Stratos', sans-serif;
+  list-style: none;
+  display: flex;
+  margin-right: 90px;
+  text-align: center;
+
+}
+
+.nav-links li {
+  margin-left: 70px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #000000;
+  transition: color 0.3s;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: #007bff;
+}
+
+/* Estilos personalizados para os parágrafos (.custom-p) */
+.custom-p {
+  font-family: 'Stratos', sans-serif;
+  font-size: 12px; 
+  color: #888; 
+  text-align: center; 
+}
+
+/* Estilos para os spans abaixo de cada link */
+.nav-links a span {
+  font-family: 'Stratos', sans-serif;
+  font-size: 10px;
+  color: #888;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+
+.nav-links a:hover span {
+  display: block;
+}
+
+/* Conteúdo principal (portfólio) */
+main {
+  margin-top: 80px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Estilos adicionais podem ser adicionados conforme necessário */

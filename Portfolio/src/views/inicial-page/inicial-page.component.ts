@@ -7,4 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicialPageComponent  {
 
+  scrollToAbout() {
+    const aboutSection = document.getElementById('about');
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  scrollToContact() {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
 }

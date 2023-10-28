@@ -1,8 +1,6 @@
-/* Estilos gerais */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
 }
 
 /* Barra de navegação */
@@ -19,16 +17,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px;
+  max-width: 100%; /* Use 100% para que o conteúdo se ajuste à largura da página */
   margin: 0 auto;
-  padding: 20px 20px;
+  padding: 2%; /* Use porcentagem para espaçamento relativo ao tamanho do contêiner */
 }
 
 .name-container {
   text-align: center;
-  margin-left: 60px;
+  margin-left: 2%; /* Use porcentagem para posicionamento relativo */
 }
-
 
 .name {
   font-size: 20px;
@@ -49,7 +46,6 @@ header {
   display: flex;
   margin-right: 90px;
   text-align: center;
-
 }
 
 .nav-links li {
@@ -64,15 +60,15 @@ header {
 }
 
 .nav-links a:hover {
-  color: #888; 
+  color: #888;
 }
 
 /* Estilos personalizados para os parágrafos (.custom-p) */
 .custom-p {
   font-family: 'Stratos', sans-serif;
-  font-size: 12px; 
-  color: #888; 
-  text-align: center; 
+  font-size: 12px;
+  color: #888;
+  text-align: center;
   margin: 0;
 }
 
@@ -91,12 +87,159 @@ header {
   display: block;
 }
 
-/* Conteúdo principal (portfólio) */
 main {
-  margin-top: 80px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 10%; /* Use porcentagem para posicionamento relativo ao tamanho da página */
+  padding: 2%; /* Use porcentagem para espaçamento relativo ao tamanho da página */
+  max-width: 100%; /* Use 100% para que o conteúdo se ajuste à largura da página */
 }
 
-/* Estilos adicionais podem ser adicionados conforme necessário */
+
+
+
+
+footer {
+  width: 100%; /* Use 100% para que o footer se ajuste à largura da página */
+  background-color: #efefef;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+}
+
+#footer_content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 5%; /* Use porcentagem para espaçamento relativo ao tamanho do contêiner */
+}
+
+
+
+#footer_contacts h1 {
+  margin-bottom: 0.75rem;
+  font-size: 40px;
+  font-family: 'Stratos', sans-serif;
+  font-weight: 900;
+}
+
+#footer_contacts p {
+  margin-bottom: 0.75rem;
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+#footer_contacts p a {
+  color: #000;
+  text-decoration: none;
+}
+
+
+#footer_social_media {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1.5rem;
+
+}
+
+#footer_social_media .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2rem;
+  color: #171717;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+
+#footer_social_media .footer-link i {
+  font-size: 1.16rem;
+}
+
+.footer-link {
+  text-decoration: none;
+  margin-right: -3%; 
+  
+}
+
+
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  list-style: none;
+}
+
+.footer-list .footer-link {
+  color: #616161;
+}
+
+
+#footer_subscribe {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+
+#input_group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+
+  padding: 1rem; /* Adiciona espaço interno para as barras de input */
+}
+
+#input_group input {
+  all: unset;
+  padding: 0.7rem;
+  width: 100%;
+  background-color: #fff; /* Definir a cor de fundo do input como branco */
+  max-width: 500px; /* Define a largura máxima das barras de input */
+  margin-bottom: 1rem;
+  border-radius: 20px; /* Bordas arredondadas */
+  text-align: center; /* Centraliza o texto do placeholder */
+  font-size: 16px; /* Tamanho da fonte para o placeholder */
+}
+
+#input_group input::placeholder {
+  font-family: 'Stratos', sans-serif; /* Define a fonte para os placeholders */
+  font-size: 13px; /* Tamanho da fonte para os placeholders */
+}
+
+
+#input_group button {
+  background-color: #f5f5f5;
+  border: none;
+  color: #171717;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+#input_group button:hover, #footer_contacts p a:hover, #footer_social_media .footer-link:hover {
+  opacity: 0.7;
+}
+
+
+
+
+#footer_copyright {
+  font-family: 'Stratos', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 400;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+}
+
+
+@media screen and (max-width: 426px) {
+  #footer_content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 3rem 2rem;
+  }
+}

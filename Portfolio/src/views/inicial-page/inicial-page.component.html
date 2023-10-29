@@ -56,14 +56,15 @@
 
       <div id="footer_subscribe">
         <div id="input_group">
-          <input type="text" id="name" placeholder="Name">
-          <input type="email" id="email" placeholder="Email">
-          <input type="text" id="message" placeholder="Message">
-          <button>
+          <input type="text" #name placeholder="Name">
+          <input type="email" #email placeholder="Email">
+          <input type="text" #message placeholder="Message">
+          <button (click)="sendEmail(name, email, message)">
             <i class="fa-regular fa-paper-plane" style="color: #000000;"></i> 
           </button>
         </div>
       </div>
+      
     </div>
     <div id="footer_copyright">
       &copy; 2023 All Rights Reserved

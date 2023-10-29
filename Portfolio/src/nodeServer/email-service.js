@@ -7,14 +7,14 @@ const transporter = nodemailer.createTransport({
   port: 587, // Ou outra porta
   secure: false, // true para 465, false para outras portas
   auth: {
-    user: 'websitePortfolioContact@gmail.com',
-    pass: 'enyxxbbmhwxedvze',
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS,
   },
 });
 
 function sendEmail(name, email, message) {
   const mailOptions = {
-    from: 'websitePortfolioContact@gmail.com',
+    from: process.env.EMAIL_USER,
     to: 'martaaferreiraa14@gmail.com', // Substitua pelo seu e-mail
     subject: 'Contato do Portfólio',
     text: `Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`,

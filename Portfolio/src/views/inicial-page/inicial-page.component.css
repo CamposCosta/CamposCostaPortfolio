@@ -24,7 +24,7 @@ header {
 
 .name-container {
   text-align: center;
-  margin-left: 2%; /* Use porcentagem para posicionamento relativo */
+  margin-left: 5%; /* Use porcentagem para posicionamento relativo */
 }
 
 .name {
@@ -40,11 +40,11 @@ header {
 }
 
 .nav-links {
-  font-size: 18px;
+  font-size: 17px;
   font-family: 'Stratos', sans-serif;
   list-style: none;
   display: flex;
-  margin-right: 90px;
+  margin-right: 100px;
   text-align: center;
 }
 
@@ -92,6 +92,65 @@ main {
   padding: 2%; /* Use porcentagem para espaçamento relativo ao tamanho da página */
   max-width: 100%; /* Use 100% para que o conteúdo se ajuste à largura da página */
 }
+
+
+
+
+
+
+.about-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 8%;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.about-images img {
+  max-width: 100%; /* Certifica-se de que as imagens não ultrapassem o contêiner */
+}
+
+.about-text {
+  flex: 1; /* Ocupa o espaço restante disponível */
+}
+
+.about-text h2 {
+  font-size: 24px;
+  font-family: 'Stratos', sans-serif;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 16px;
+  font-family: 'Stratos', sans-serif;
+  color: #000;
+  text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -21,54 +21,86 @@
           <a href="#about">About</a>
         </li>
         <li>
+          <a href="#work">Work</a>
+        </li>
+        <li>
           <a href="#contacts">Contacts</a>
         </li>
       </ul>      
     </div>
   </header>
+
+
   <main>
     <section id="about">
-      <!-- Conteúdo da seção About -->
+      <div class="about-content">
+        <div class="about-images">
+          <img src="camposCosta.png" alt="Foto do rapaz 1">
+          <img src="camposCosta.png" alt="Foto do rapaz 2">
+        </div>
+        <div class="about-text">
+          <h2>About Me</h2>
+          <p>
+            Olá, eu sou Francisco Campos Costa, um editor e diretor de fotografia apaixonado por contar histórias visuais. Com anos de experiência na indústria cinematográfica, estou comprometido em capturar momentos incríveis e criar conteúdo excepcional. Minha paixão pela arte do cinema me levou a explorar novos horizontes e aperfeiçoar minha técnica.
+          </p>
+        </div>
+      </div>
     </section>
-  </main>
-  <footer id="contacts">
-    <div id="footer_content">
-      <div id="footer_contacts">
-        <h1>CC.PRODS</h1>
-        <p><a href="mailto:francisco@gmail.com">francisco@gmail.com</a></p>
-        <p>(+351) 912345432</p>
+    
 
-        <div id="footer_social_media">
-          <a href="https://www.instagram.com/seuusuario" class="footer-link" id="instagram">
-            <i class="fa-brands fa-instagram" style="color: #000000;"></i>
-          </a>
-          <a href="https://www.youtube.com/@cc.prods1" class="footer-link" id="youtube">
-            <i class="fa-brands fa-youtube" style="color: #000000;"></i>
-          </a>
-          <a href="https://www.linkedin.com/in/seuusuario" class ="footer-link" id="linkedIn">
-            <i class="fa-brands fa-linkedin" style="color: #000000;"></i>
-          </a>
-          <a href="https://wa.me/seunumerodetelefone" class="footer-link" id="whatsapp">
-            <i class="fa-brands fa-whatsapp" style="color: #000000;"></i>
-          </a>
-        </div>
-      </div>
+    <section id="work">
 
-      <div id="footer_subscribe">
-        <div id="input_group">
-          <input type="text" #name placeholder="Name">
-          <input type="email" #email placeholder="Email">
-          <input type="text" #message placeholder="Message">
-          <button (click)="sendEmail(name, email, message)">
-            <i class="fa-regular fa-paper-plane" style="color: #000000;"></i> 
-          </button>
-        </div>
-      </div>
       
-    </div>
-    <div id="footer_copyright">
-      &copy; 2023 All Rights Reserved
-    </div>  
-  </footer>
+
+    </section>
+
+
+  </main>
+
+
+    <section id="contacts">
+
+      <footer id="contacts">
+        <div id="footer_content">
+          <div id="footer_contacts">
+            <h1>CC.PRODS</h1>
+            <p><a href="mailto:francisco@gmail.com">francisco@gmail.com</a></p>
+            <p>(+351) 912345432</p>
+
+            <div id="footer_social_media">
+              <a href="https://www.instagram.com/seuusuario" class="footer-link" id="instagram">
+                <i class="fa-brands fa-instagram" style="color: #000000;"></i>
+              </a>
+              <a href="https://www.youtube.com/@cc.prods1" class="footer-link" id="youtube">
+                <i class="fa-brands fa-youtube" style="color: #000000;"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/seuusuario" class ="footer-link" id="linkedIn">
+                <i class="fa-brands fa-linkedin" style="color: #000000;"></i>
+              </a>
+              <a href="https://wa.me/seunumerodetelefone" class="footer-link" id="whatsapp">
+                <i class="fa-brands fa-whatsapp" style="color: #000000;"></i>
+              </a>
+            </div>
+          </div>
+
+          <div id="footer_subscribe">
+            <div id="input_group">
+              <input type="text" #name placeholder="Name">
+              <input type="email" #email placeholder="Email">
+              <input type="text" #message placeholder="Message">
+              <button (click)="sendEmail(name, email, message)">
+                <i class="fa-regular fa-paper-plane" style="color: #000000;"></i> 
+              </button>
+            </div>
+          </div>
+          
+        </div>
+        <div id="footer_copyright">
+          &copy; 2023 All Rights Reserved
+        </div>  
+      </footer>
+
+    </section>
+
 </body>
 </html>

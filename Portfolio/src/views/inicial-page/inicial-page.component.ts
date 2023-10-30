@@ -1,5 +1,6 @@
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { EmailService } from 'src/app/services/email.service';
 
 @Component({
@@ -41,8 +42,15 @@ export class InicialPageComponent {
     }
   }
 
-  scrollToContact() {
-    const contactSection = document.getElementById('contact');
+  scrollToWork() {
+    const contactSection = document.getElementById('work');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+  scrollToContacts() {
+    const contactSection = document.getElementById('contacts');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
     }

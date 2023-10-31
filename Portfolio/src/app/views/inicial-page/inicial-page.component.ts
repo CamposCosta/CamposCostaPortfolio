@@ -35,24 +35,7 @@ export class InicialPageComponent {
 
 
 
-  scrollToAbout() {
-    const aboutSection = document.getElementById('about');
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  scrollToWork() {
-    const contactSection = document.getElementById('work');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  }
-
-  scrollToContacts() {
-    const contactSection = document.getElementById('contacts');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
+  scroll(el: HTMLElement) {
+    el.scrollIntoView({behavior: 'smooth'});
   }
 }

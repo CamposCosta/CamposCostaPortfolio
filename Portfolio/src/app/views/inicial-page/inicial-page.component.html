@@ -18,13 +18,13 @@
       </div>
       <ul class="nav-links">
         <li>
-          <a href="#about">About</a>
+          <a (click)="scroll(about)">About</a>
         </li>
         <li>
           <a routerLink="/work-page">Work</a>
         </li>
         <li>
-          <a href="#contacts">Contacts</a>
+          <a (click)="scroll(contacts)">Contacts</a>
         </li>
       </ul>      
     </div>
@@ -32,7 +32,7 @@
 
 
   <main>
-    <section id="about">
+    <section #about>
       <div class="about-content">
         <div class="about-images">
           <img src="camposCosta.png" alt="Foto do rapaz 1">
@@ -58,7 +58,7 @@
   </main>
 
 
-    <section id="contacts">
+    <section #contacts>
 
       <footer id="contacts">
         <div id="footer_content">

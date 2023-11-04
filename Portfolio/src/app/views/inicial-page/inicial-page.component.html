@@ -82,17 +82,45 @@
               </a>
             </div>
           </div>
-
           <div id="footer_subscribe">
+            <form [formGroup]="emailForm">
+
             <div id="input_group">
-              <input type="text" #name placeholder="Name">
-              <input type="email" #email placeholder="Email">
-              <input type="text" #message placeholder="Message">
-              <button (click)="sendEmail(name, email, message)">
-                <i class="fa-regular fa-paper-plane" style="color: #000000;"></i> 
-              </button>
+                <input type="text" formControlName="name" placeholder="Name">
+                <div *ngIf="emailForm.get('name')?.hasError('required') && emailForm.get('name')?.touched" class="error-message">
+                  Name is required.
+                </div>
+                <div *ngIf="emailForm.get('name')?.hasError('maxLength') && emailForm.get('name')?.touched" class="error-message">
+                  Name should have fewer than 50 characters.
+                </div>
+                <div *ngIf="emailForm.get('name')?.hasError('pattern') && emailForm.get('name')?.touched" class="error-message">
+                  Invalid name.
+                </div>
+          
+                <input type="email" formControlName="email" placeholder="Email">
+                <div *ngIf="emailForm.get('email')?.hasError('required') && emailForm.get('email')?.touched" class="error-message">
+                  Email is required.
+                </div>
+                <div *ngIf="emailForm.get('email')?.hasError('pattern') && emailForm.get('email')?.touched" class="error-message">
+                  Invalid Gmail email address.
+                </div>
+          
+                <input type="text" formControlName="message" placeholder="Message">
+                <div *ngIf="emailForm.get('message')?.hasError('required') && emailForm.get('message')?.touched" class="error-message">
+                  Message is required.
+                </div>
+                <div *ngIf="emailForm.get('message')?.hasError('maxLength') && emailForm.get('message')?.touched" class="error-message">
+                  Message should have fewer than 100 characters.
+                </div>
+          
+                <button (click)="sendEmail()">
+                  <i class="fa-regular fa-paper-plane" style="color: #000000;"></i>
+                </button>
             </div>
+          </form>
+
           </div>
+          
           
         </div>
         <div id="footer_copyright">

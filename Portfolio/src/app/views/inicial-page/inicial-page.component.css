@@ -154,7 +154,6 @@ footer {
   background-color: #efefef;
   color: #000000;
   margin: 0;
-  padding: 0;
 }
 
 #footer_content {
@@ -166,14 +165,14 @@ footer {
 
 
 #footer_contacts h1 {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-size: 40px;
   font-family: 'Stratos', sans-serif;
   font-weight: 900;
 }
 
 #footer_contacts p {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.5rem;
   font-size: 18px;
   font-weight: 500;
 
@@ -234,32 +233,43 @@ footer {
   gap: 1.5rem;
 }
 
-
 #input_group {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   border-radius: 4px;
+  padding: 1rem;
+  margin-top: 1.35rem;
 
-  padding: 1rem; /* Adiciona espaço interno para as barras de input */
+
 }
 
 #input_group input {
   all: unset;
   padding: 0.7rem;
   width: 100%;
-  background-color: #fff; /* Definir a cor de fundo do input como branco */
-  max-width: 500px; /* Define a largura máxima das barras de input */
+  background-color: #fff;
+  max-width: 500px;
   margin-bottom: 1rem;
-  border-radius: 20px; /* Bordas arredondadas */
-  text-align: center; /* Centraliza o texto do placeholder */
-  font-size: 16px; /* Tamanho da fonte para o placeholder */
+  border-radius: 20px;
+  text-align: center;
+  font-size: 16px;
 }
 
 #input_group input::placeholder {
-  font-family: 'Stratos', sans-serif; /* Define a fonte para os placeholders */
-  font-size: 13px; /* Tamanho da fonte para os placeholders */
+  font-family: 'Stratos', sans-serif;
+  font-size: 13px;
 }
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  text-align: center;
+  margin-top: -0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 
 
 #input_group button {
@@ -269,12 +279,14 @@ footer {
   font-size: 1.125rem;
   cursor: pointer;
   transition: all 0.4s;
+  margin-top: 0.5rem; /* Adicione um espaço superior para alinhá-lo com #footer_social_media */
 }
 
-#input_group button:hover, #footer_contacts p a:hover, #footer_social_media .footer-link:hover {
+#input_group button:hover,
+#footer_contacts p a:hover,
+#footer_social_media .footer-link:hover {
   opacity: 0.7;
 }
-
 
 
 
@@ -285,8 +297,11 @@ footer {
   align-items: center;
   display: flex;
   justify-content: center;
+  text-align: center; /* Centraliza o texto */
 
 }
+
+
 
 
 @media screen and (max-width: 426px) {

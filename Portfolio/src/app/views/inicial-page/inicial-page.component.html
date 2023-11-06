@@ -96,9 +96,9 @@
                   Invalid name.
                 </div>
           
-                <input type="email" formControlName="email" placeholder="Email">
+                <input type="email" formControlName="email" placeholder="Gmail">
                 <div *ngIf="emailForm.get('email')?.hasError('required') && emailForm.get('email')?.touched" class="error-message">
-                  Email is required.
+                  Gmail is required.
                 </div>
                 <div *ngIf="emailForm.get('email')?.hasError('pattern') && emailForm.get('email')?.touched" class="error-message">
                   Invalid Gmail email address.

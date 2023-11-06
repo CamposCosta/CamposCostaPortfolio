@@ -97,7 +97,7 @@ main {
 
 
 
-
+/* Estilos para a seção "About Me" */
 .about-content {
   display: flex;
   justify-content: space-between;
@@ -107,18 +107,20 @@ main {
   padding: 8%;
 }
 
-.about-images {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+/* Estilos para as imagens dentro do aside */
+.image-aside {
+  width: 30%; /* Largura desejada para o aside */
+  margin-right: 5%; /* Adicione margem direita conforme necessário */
+  float: left; /* Flutua o aside para a esquerda (opcional) */
 }
 
-.about-images img {
-  max-width: 100%; /* Certifica-se de que as imagens não ultrapassem o contêiner */
+.image-aside img {
+  max-width: 100%; /* Certifica-se de que as imagens não ultrapassem o contêiner do aside */
 }
 
+/* Estilos para o texto na seção "About Me" */
 .about-text {
-  flex: 1; /* Ocupa o espaço restante disponível */
+  flex: 1;
 }
 
 .about-text h2 {
@@ -134,6 +136,7 @@ main {
   color: #000;
   text-align: left;
 }
+
 
 
 

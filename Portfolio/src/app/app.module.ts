@@ -7,7 +7,8 @@ import { InicialPageComponent } from 'src/app/views/inicial-page/inicial-page.co
 import { ReactiveFormsModule } from '@angular/forms'; // Importe o ReactiveFormsModule
 import { FormsModule } from '@angular/forms';
 import { WorkPageComponent } from 'src/app/views/work-page/work-page.component';
-import { NavbarComponent } from 'src/app/views/navbar/navbar.component';// Importe o ReactiveFormsModule
+import { NavbarComponent } from 'src/app/views/navbar/navbar.component';
+import { CoverPageComponent } from './views/cover-page/cover-page.component';// Importe o ReactiveFormsModule
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NavbarComponent } from 'src/app/views/navbar/navbar.component';// Impor
     InicialPageComponent,
     WorkPageComponent,
     NavbarComponent,
+    CoverPageComponent,
     
   ],
   imports: [

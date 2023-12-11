@@ -2,4 +2,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
+.cover-page-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  
+  button {
+    margin-top: 50px; /* Reduzi a margem para melhor ajuste */
+    font-size: 1.5rem; /* Ajusta o tamanho do texto do botão */
+    background-color: transparent; /* Define o fundo como transparente */
+    color: white; /* Define a cor do texto como branca */
+    border: none; /* Remove a borda do botão */
+    cursor: pointer; /* Adiciona um cursor indicando que é clicável */
+    transition: color 0.3s ease-in-out; /* Adiciona uma transição suave na cor do texto */
+}
+  
+  button:hover {
+    color: cyan; /* Muda a cor do texto ao passar o mouse sobre o botão */
+  }

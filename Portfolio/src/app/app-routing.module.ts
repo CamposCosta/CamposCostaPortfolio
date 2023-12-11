@@ -5,7 +5,7 @@ import { WorkPageComponent } from 'src/app/views/work-page/work-page.component';
 import { CoverPageComponent } from 'src/app/views/cover-page/cover-page.component';
 
 const routes: Routes = [
-  { path: '',redirectTo: 'inicial-page', pathMatch: 'full' },
+  { path: '',redirectTo: 'cover-page', pathMatch: 'full' },
   { path: 'cover-page', component: CoverPageComponent,},
   { path: 'inicial-page', component: InicialPageComponent,},
   { path: 'work-page', component: WorkPageComponent,},

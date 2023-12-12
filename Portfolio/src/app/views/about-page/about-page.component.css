@@ -1,0 +1,65 @@
+/* Estilos para a seção "About Me" */
+
+  
+  .about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 6%;
+    background-color: black; /* Alteração da cor de fundo para preto */
+    color: white; /* Alteração da cor do texto para branco */
+  }
+  
+  /* Estilos para as imagens dentro do aside */
+  .image-aside {
+    width: 30%;
+    margin-right: 5%;
+    float: left;
+  }
+  
+  .image-aside img {
+    max-width: 100%;
+  }
+  
+  /* Estilos para o texto na seção "About Me" */
+  .about-text {
+    flex: 1;
+    padding: 4%;
+
+  }
+  
+  .about-text h2 {
+    font-size: 24px;
+    font-family: 'Stratos', sans-serif;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-align: center; /* Centralize o texto */
+  }
+  
+  .about-text p {
+    font-size: 14px;
+    font-family: 'Stratos', sans-serif;
+    color: white;
+    text-align: center; /* Centralize o texto */
+  }
+  
+  .back-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinha à direita */
+    text-decoration: none;
+    color: white;
+    margin-top: 1rem;
+    margin-right: 2rem;
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    right: 0; /* Encosta ao lado direito */
+  }
+  
+  .back-link i {
+    margin-left: 0.5rem; /* Ajusta a margem para separar o ícone dos traços */
+  }
+  

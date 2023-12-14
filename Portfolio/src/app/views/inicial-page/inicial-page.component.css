@@ -1,65 +1,69 @@
-body {
+html, body {
   margin: 0;
   padding: 0;
+  background-color: black;
+  color: white;
+  font-family: 'Stratos', sans-serif;
+  height: 100%;
 }
 
-/* Barra de navegação */
-header {
-  background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
+
 
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 100%; /* Use 100% para que o conteúdo se ajuste à largura da página */
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2%; /* Use porcentagem para espaçamento relativo ao tamanho do contêiner */
+  padding: 2%;
 }
 
 .name-container {
   text-align: center;
-  margin-left: 5%; /* Use porcentagem para posicionamento relativo */
-}
-
-.name {
-  font-size: 20px;
-  font-family: 'Stratos', sans-serif;
-  font-weight: 900;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2%; /* Ajuste conforme necessário */
 }
 
 .subtitle {
   font-family: 'Stratos', sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-style: italic;
+  margin-top: 1rem; /* Ajuste conforme necessário */
 }
 
-.nav-links {
-  font-size: 17px;
+
+.name {
+  font-size: 24px;
   font-family: 'Stratos', sans-serif;
+  font-weight: 900;
+}
+
+
+
+.main-nav-links {
   list-style: none;
   display: flex;
-  margin-right: 100px;
+  justify-content: space-around;
+  padding: 0;
+  margin-top: 2%;
+  align-items: center; /* Adiciona alinhamento vertical ao centro */
+}
+
+.nav-link {
   text-align: center;
 }
 
-.nav-links li {
-  margin-left: 70px;
-}
-
-.nav-links a {
+.main-nav-links .nav-text {
   text-decoration: none;
-  color: #000000;
+  color: white;
   transition: color 0.3s;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Adiciona alinhamento vertical ao centro */
 }
 
-.nav-links a:hover {
+.main-nav-links a:hover {
   color: #888;
 }
 
@@ -88,73 +92,17 @@ header {
 }
 
 main {
-  margin-top: 10%; /* Use porcentagem para posicionamento relativo ao tamanho da página */
-  padding: 2%; /* Use porcentagem para espaçamento relativo ao tamanho da página */
-  max-width: 100%; /* Use 100% para que o conteúdo se ajuste à largura da página */
-}
-
-
-
-
-
-/* Estilos para a seção "About Me" */
-.about-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  margin-top: 10%;
+  padding: 2%;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 8%;
 }
-
-/* Estilos para as imagens dentro do aside */
-.image-aside {
-  width: 30%; /* Largura desejada para o aside */
-  margin-right: 5%; /* Adicione margem direita conforme necessário */
-  float: left; /* Flutua o aside para a esquerda (opcional) */
-}
-
-.image-aside img {
-  max-width: 100%; /* Certifica-se de que as imagens não ultrapassem o contêiner do aside */
-}
-
-/* Estilos para o texto na seção "About Me" */
-.about-text {
-  flex: 1;
-}
-
-.about-text h2 {
-  font-size: 24px;
-  font-family: 'Stratos', sans-serif;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.about-text p {
-  font-size: 16px;
-  font-family: 'Stratos', sans-serif;
-  color: #000;
-  text-align: left;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
 
 footer {
-  width: 100%; /* Use 100% para que o footer se ajuste à largura da página */
-  background-color: #efefef;
+  width: 100%;
+  background-color: rgb(179, 177, 177);
   color: #000000;
   margin: 0;
 }
@@ -162,10 +110,8 @@ footer {
 #footer_content {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  padding: 5%; /* Use porcentagem para espaçamento relativo ao tamanho do contêiner */
+  padding: 5%;
 }
-
-
 
 #footer_contacts h1 {
   margin-bottom: 0.5rem;
@@ -178,20 +124,17 @@ footer {
   margin-bottom: 0.5rem;
   font-size: 18px;
   font-weight: 500;
-
 }
 
 #footer_contacts p a {
-  color: #000;
+  color: white; /* Alteração da cor do texto para branco */
   text-decoration: none;
 }
-
 
 #footer_social_media {
   display: flex;
   gap: 2rem;
   margin-top: 1.5rem;
-
 }
 
 #footer_social_media .footer-link {
@@ -205,18 +148,14 @@ footer {
   transition: all 0.4s;
 }
 
-
 #footer_social_media .footer-link i {
   font-size: 1.16rem;
 }
 
 .footer-link {
   text-decoration: none;
-  margin-right: -3%; 
-  
+  margin-right: -3%;
 }
-
-
 
 .footer-list {
   display: flex;
@@ -226,9 +165,8 @@ footer {
 }
 
 .footer-list .footer-link {
-  color: #616161;
+  color: rgb(179, 177, 177);
 }
-
 
 #footer_subscribe {
   display: flex;
@@ -244,8 +182,6 @@ footer {
   border-radius: 4px;
   padding: 1rem;
   margin-top: 1.35rem;
-
-
 }
 
 #input_group input {
@@ -273,16 +209,14 @@ footer {
   margin-bottom: 0.5rem;
 }
 
-
-
 #input_group button {
-  background-color: #efefef;
+  background-color: rgb(179, 177, 177);
   border: none;
   color: #171717;
   font-size: 1.125rem;
   cursor: pointer;
   transition: all 0.4s;
-  margin-top: 0.5rem; /* Adicione um espaço superior para alinhá-lo com #footer_social_media */
+  margin-top: 0.5rem;
 }
 
 #input_group button:hover,
@@ -291,8 +225,6 @@ footer {
   opacity: 0.7;
 }
 
-
-
 #footer_copyright {
   font-family: 'Stratos', sans-serif;
   font-size: 0.6rem;
@@ -300,12 +232,8 @@ footer {
   align-items: center;
   display: flex;
   justify-content: center;
-  text-align: center; /* Centraliza o texto */
-
+  text-align: center;
 }
-
-
-
 
 @media screen and (max-width: 426px) {
   #footer_content {
@@ -313,3 +241,4 @@ footer {
     gap: 3rem 2rem;
   }
 }
+

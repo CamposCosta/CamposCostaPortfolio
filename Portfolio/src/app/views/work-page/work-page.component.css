@@ -1,0 +1,22 @@
+
+
+
+
+
+.back-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Alinha à esq */
+    text-decoration: none;
+    color: white;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    position: absolute;
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    left: 0; /* Encosta ao lado direito */
+  }
+  
+  .back-link i {
+    margin-right: 0.5rem; /* Ajusta a margem para separar o ícone dos traços */
+  }

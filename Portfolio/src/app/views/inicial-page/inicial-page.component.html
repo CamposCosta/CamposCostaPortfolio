@@ -9,61 +9,51 @@
     <script src="scripts.js"></script>
   </head>
   
+
 <body>
-  <header>
+
     <div class="navbar">
       <div class="name-container">
         <div class="name">FRANCISCO CAMPOS COSTA</div>
         <div class="subtitle">Editor & Director of Photography</div>
       </div>
-      <ul class="nav-links">
-        <li>
-          <a (click)="scroll(about)">About</a>
-        </li>
-        <li>
-          <a routerLink="/work-page">Work</a>
-        </li>
-        <li>
-          <a (click)="scroll(contacts)">Contacts</a>
-        </li>
-      </ul>      
     </div>
-  </header>
-
-
-  <main>
-    <section #about>
-      <div class="about-content">
-        <aside class="image-aside">
-          <img src="./assets/camposCosta.png" alt="Minha imagem">
-        </aside>
-        <div class="about-text">
-          <h2>About Me</h2>
-          <p>
-            Olá, eu sou Francisco Campos Costa, um editor e diretor de fotografia apaixonado por contar histórias visuais. Com anos de experiência na indústria cinematográfica, estou comprometido em capturar momentos incríveis e criar conteúdo excepcional. Minha paixão pela arte do cinema me levou a explorar novos horizontes e aperfeiçoar minha técnica.
-          </p>
-        </div>
-      </div>
-    </section>
     
 
-    <section id="work">
 
-      
+    <main>
+      <ul class="main-nav-links">
+        <li class="nav-link1">
+          <a href="/about-page" class="back-link">
+            <i class="fas fa-arrow-left"></i> 
+          </a>
+          <a routerLink="/about-page" class="nav-text">About</a>
+        </li> 
+        <li class="nav-link2">
+          <a (click)="scroll(contacts)" class="nav-text">Contacts</a>
+          <a (click)="scroll(contacts)" class="back-link">
+            <i class="fas fa-arrow-down"></i> 
+          </a>
+        </li>
+        <li class="nav-link3">
+          <a routerLink="/work-page" class="nav-text">Work</a>
+          <a href="/work-page" class="back-link">
+            <i class="fas fa-arrow-right"></i> 
+          </a>
+        </li>
+      </ul>
+    </main>
+    
 
-    </section>
 
 
-  </main>
-
-
-    <section #contacts>
+    <section #contacts >
 
       <footer id="contacts">
         <div id="footer_content">
           <div id="footer_contacts">
             <h1>CC.PRODS</h1>
-            <p><a href="mailto:francisco@gmail.com">francisco@gmail.com</a></p>
+            <p><a href="mailto:francisco@gmail.com">francisco@gmail.com </a></p>
             <p>(+351) 912345432</p>
 
             <div id="footer_social_media">

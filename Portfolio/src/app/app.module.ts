@@ -7,16 +7,16 @@ import { InicialPageComponent } from 'src/app/views/inicial-page/inicial-page.co
 import { ReactiveFormsModule } from '@angular/forms'; // Importe o ReactiveFormsModule
 import { FormsModule } from '@angular/forms';
 import { WorkPageComponent } from 'src/app/views/work-page/work-page.component';
-import { NavbarComponent } from 'src/app/views/navbar/navbar.component';
-import { CoverPageComponent } from './views/cover-page/cover-page.component';// Importe o ReactiveFormsModule
+import { CoverPageComponent } from './views/cover-page/cover-page.component';
+import { AboutPageComponent } from './views/about-page/about-page.component';// Importe o ReactiveFormsModule
 
 @NgModule({
   declarations: [
     AppComponent,
     InicialPageComponent,
     WorkPageComponent,
-    NavbarComponent,
     CoverPageComponent,
+    AboutPageComponent,
     
   ],
   imports: [

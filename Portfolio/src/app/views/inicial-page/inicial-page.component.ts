@@ -19,6 +19,7 @@ export class InicialPageComponent {
     });
   }
 
+
   sendEmail() {
     if (this.emailForm.valid) {
       const nameControl = this.emailForm.get('name');

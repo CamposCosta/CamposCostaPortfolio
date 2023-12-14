@@ -1,6 +1,7 @@
-/* import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import * as THREE from 'three';
 import CoverPage from '../../../assets/jsFiles/coverPage.js';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cover-page',
@@ -10,7 +11,7 @@ import CoverPage from '../../../assets/jsFiles/coverPage.js';
 export class CoverPageComponent implements AfterViewInit {
   private CoverPage: CoverPage|undefined;
   
-  constructor(){}
+  constructor(private router: Router){}
 
   ngAfterViewInit(){
     this.initialize();
@@ -21,13 +22,16 @@ export class CoverPageComponent implements AfterViewInit {
     this.CoverPage = new CoverPage();
   }
 
-  private animate(){
+  /*private animate(){
     this.CoverPage?.update();
+  }*/
+
+  enterSite() {
+    this.router.navigate(['/inicial-page']);
   }
 
-
-} */
-
+} 
+/*
 import { Component, ElementRef, ViewChild, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import * as THREE from 'three';
@@ -110,6 +114,6 @@ export class CoverPageComponent implements OnInit {
   enterSite() {
     this.router.navigate(['/inicial-page']);
   }
-}
+}*/
 
 

@@ -1,10 +1,19 @@
-.webgl{
+.cover-page-container .webgl{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none;
+    width: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
+
 .cover-page-container {
+    position: relative;
+    margin: 0;
+    padding: 0;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -13,19 +22,23 @@
     background-color: black;
     margin-top: 0;
     padding: 0;
-  }
+}
   
   
-  button {
+  .custom-button {
+    z-index: 2;
+    position: absolute; /* Posiciona o botão de forma absoluta */
+    bottom: 150px; /* Define a distância do botão a partir do fundo do contêiner */
     margin-top: 50px; /* Reduzi a margem para melhor ajuste */
-    font-size: 1.5rem; /* Ajusta o tamanho do texto do botão */
+    font-size: 1.7rem; /* Ajusta o tamanho do texto do botão */
     background-color: transparent; /* Define o fundo como transparente */
     color: white; /* Define a cor do texto como branca */
     border: none; /* Remove a borda do botão */
     cursor: pointer; /* Adiciona um cursor indicando que é clicável */
     transition: color 0.3s ease-in-out; /* Adiciona uma transição suave na cor do texto */
+    font-family: "Poppins", sans-serif;
 }
   
-  button:hover {
+.custom-button:hover {
     color: cyan; /* Muda a cor do texto ao passar o mouse sobre o botão */
   }

@@ -1,9 +1,143 @@
 
+  body{
+    background-color: #eaeaea ;
+    overflow: hidden;
+  }
 
 
 
+  #slide{
+    width:max-content;
+    margin-top: 50px;
+  }
 
-.back-link {
+  .item{
+    width: 200px;
+    height:300px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 0.7s;
+    background-size: cover;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    transform: translate(0,-50%);
+    border-radius: 20px;
+    box-shadow: 0 30px 50px #505050;
+  }
+
+
+  .item:nth-child(1),
+  .item:nth-child(2){
+  left: 0;
+  top: 0;
+  transform: translate(0,0);
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: none;
+  }
+  .item:nth-child(3){
+    left: 50%;
+  }
+  .item:nth-child(4){
+    left: calc(50% + 220px);
+  }
+  .item:nth-child(5){
+    left: calc(50% + 440px);
+  }
+  .item:nth-child(n+6){
+    left: calc(50% + 660px);
+    opacity: 0;
+  }
+  .item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    padding: 0;
+    color: #eee;
+    transform: translate(0, -50%); 
+    display: none;
+  }
+  .item:nth-child(2) .content{
+    display: block;
+    z-index: 11111;
+  }
+  .item .name{
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .item .des{
+    margin: 20px 0;
+  }
+  .item button{
+    padding: 10px 20px;
+    border: none;
+  }
+
+  @keyframes showcontent{
+    from{
+      opacity: 0;
+      transform: translate(0, 100px);
+      filter: blur(33px);
+    }to{
+      opacity: 1;
+      transform: translate(0,0);
+      filter: blur(0);
+    }
+  }
+
+
+  .buttons {
+    position: absolute;
+    bottom: 30px;
+    z-index: 222222;
+    text-align: center;
+    width: 100%;
+  }
+  
+    /* Estilos para todos os botões com o atributo data-youtube-link */
+/* Estilos para todos os botões com o atributo data-youtube-link */
+button[data-youtube-link] {
+  font-family: 'Stratos', sans-serif;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  position: absolute;
+  border-radius: 15px;
+  border: 2px solid #fff;
+  padding: 35px 35px;
+  background: transparent;
+  transition: background 0.9s; /* Adiciona uma transição de 0.3 segundos para o fundo */
+}
+
+/* Estilos de hover para indicar que é clicável */
+button[data-youtube-link]:hover {
+  color: rgb(0, 0, 0); /* Muda a cor do texto ao passar o mouse */
+  background: #fff; /* Altera o fundo para branco no hover */
+}
+
+
+  .buttons button {
+    font-size: 24px; /* Ajuste o tamanho da fonte conforme necessário */
+    width: 70px;
+    height: 70px;
+    background: none; /* Remove o fundo */
+    border: none; /* Remove a borda */
+    transition: color 0.5s; /* Adiciona uma transição para a cor */
+    
+  }
+  
+  .buttons button:hover {
+    color: white; /* Muda a cor do texto ao passar o mouse */
+  }
+  
+
+  .back-link {
     display: flex;
     align-items: center;
     justify-content: flex-start; /* Alinha à esq */
@@ -15,8 +149,13 @@
     top: 50%; /* Centraliza verticalmente */
     transform: translateY(-50%);
     left: 0; /* Encosta ao lado direito */
+    z-index: 9999; /* Valor alto para garantir que esteja sempre em primeiro plano */
   }
   
   .back-link i {
     margin-right: 0.5rem; /* Ajusta a margem para separar o ícone dos traços */
+  }
+  
+  .back-link :hover {
+    color: white; /* Muda a cor do texto ao passar o mouse */
   }

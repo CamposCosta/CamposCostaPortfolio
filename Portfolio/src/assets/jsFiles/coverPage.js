@@ -8,6 +8,33 @@ export default class CoverPage {
     constructor(){
         this.scene = new THREE.Scene();
 
+        //fog
+        //this.scene.fog = new THREE.Fog(0x000000, 200, 600); // Color, Near, Far
+
+        //skybox
+        let materialArray = [];
+        
+        let texture_ft = new THREE.TextureLoader().load("./assets/skybox/heaven_ft.jpg")
+        let texture_bk = new THREE.TextureLoader().load("./assets/skybox/heaven_bk.jpg")
+        let texture_up = new THREE.TextureLoader().load("./assets/skybox/heaven_up.jpg")
+        let texture_dn = new THREE.TextureLoader().load("./assets/skybox/heaven_dn.jpg")
+        let texture_rt = new THREE.TextureLoader().load("./assets/skybox/heaven_rt.jpg")
+        let texture_lf = new THREE.TextureLoader().load("./assets/skybox/heaven_lf.jpg")
+
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_ft}))
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_bk}))
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_up}))
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_dn}))
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_rt}))
+        materialArray.push(new THREE.MeshBasicMaterial({map: texture_lf}))
+
+        for(let i=0;i<6;i++){
+            materialArray[i].side = THREE.BackSide;
+        }
+
+        const skyboxGeo = new THREE.BoxGeometry(500, 500, 500)
+        const skybox = new THREE.Mesh(skyboxGeo, materialArray)
+        this.scene.add(skybox)
 
         const loader = new GLTFLoader();
         loader.load('./assets/3dModels/3dLogo2.glb', (gltf) => {
@@ -46,9 +73,6 @@ export default class CoverPage {
 
         //this.scene.add(this.mesh);
 
-        console.log(this.mesh)
-
-
         const sizes = {
             width: window.innerWidth,
             height: window.innerHeight,
@@ -66,7 +90,7 @@ export default class CoverPage {
         this.scene.add(ambientLight);*/
 
         // Camera
-        this.camera = new THREE.PerspectiveCamera(45, sizes.width/sizes.height, 0.1, 100);
+        this.camera = new THREE.PerspectiveCamera(45, sizes.width/sizes.height, 0.1, 10000);
         this.camera.position.x = 0
         this.camera.position.y = 0;
         this.camera.position.z = 30;

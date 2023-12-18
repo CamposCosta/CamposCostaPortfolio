@@ -131,6 +131,10 @@ footer {
   text-decoration: none;
 }
 
+#footer_contacts p a:hover{
+  color: black; /* Alteração da cor do texto para branco */
+}
+
 #footer_social_media {
   display: flex;
   gap: 2rem;

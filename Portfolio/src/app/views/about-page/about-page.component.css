@@ -1,50 +1,135 @@
 /* Estilos para a seção "About Me" */
 
-  
-  .about-content {
+  body{
+    overflow: hidden;
+    font-family: 'Stratos', sans-serif;
+
+  }
+
+
+  .wrapper {
     display: flex;
-    justify-content: space-between;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content: center;
     align-items: center;
-    max-width: 100%;
-    margin: 0 auto;
-    padding: 6%;
-    background-color: black; /* Alteração da cor de fundo para preto */
-    color: white; /* Alteração da cor do texto para branco */
+    padding: 0 6%;
+    overflow: hidden;
   }
   
-  /* Estilos para as imagens dentro do aside */
-  .image-aside {
-    width: 30%;
-    margin-right: 5%;
-    float: left;
+
+  
+  @keyframes object2{
+    50%{
+      left: 25%;
+      top: 30%;
+    }
+  }
+
+  .cols{
+    width: 50%;
+  }
+  .cols0{
+    width:60%;
+    z-index: 5;
   }
   
-  .image-aside img {
-    max-width: 100%;
+  .topline {
+    display: block;
+    position: relative;
+    font-size: 35px;
+    letter-spacing: 5px;
+    color: white;
   }
   
-  /* Estilos para o texto na seção "About Me" */
-  .about-text {
-    flex: 1;
-    padding: 4%;
+  
+  h1 {
+    margin-top: 6%;
+    display: block;
+    font-size: 7em;
+    font-weight: 900;
+    color: white;
+  }
+  
+  .multiText {
+    text-transform: capitalize;
+    color: rgb(90, 60, 41);
+    font-size: 90%;
 
   }
   
-  .about-text h2 {
-    font-size: 24px;
-    font-family: 'Stratos', sans-serif;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    text-align: center; /* Centralize o texto */
+  p{
+    margin-top: -50px; /* Ajuste conforme necessário */
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    color:white
   }
+/* Estilos para todos os botões em .btns */
+.btns button {
+  margin-top: 50px; /* Ajuste conforme necessário */
+
+  font-family: 'Stratos', sans-serif;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #fff;
+  position: absolute;
+  border-radius: 15px;
+  padding: 15px 30px; /* Ajuste o padding conforme necessário */
+  background: transparent;
+  transition: background 0.9s; /* Adiciona uma transição de 0.3 segundos para o fundo */
+}
+
+/* Estilos de hover para indicar que é clicável */
+.btns button:hover {
+  color: rgb(0, 0, 0); /* Muda a cor do texto ao passar o mouse */
+  background: #fff; /* Altera o fundo para branco no hover */
+  border: 2px solid transparent; /* Adiciona uma borda transparente ao passar o mouse */
+}
+
+/* Estilos específicos para o botão "Download CV" */
+.cv-download-link {
+  text-decoration: none; /* Remove a sublinhado padrão do link */
+  color: #fff; /* Cor do texto */
+}
+
+.cv-download-link button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  border-radius: 15px;
+  padding: 15px 30px; /* Ajuste o padding conforme necessário */
+  background: transparent;
+  transition: background 0.9s; /* Adiciona uma transição de 0.3 segundos para o fundo */
+}
+
+.cv-download-link button:hover {
+  color: rgb(0, 0, 0); /* Muda a cor do texto ao passar o mouse */
+  background: #fff; /* Altera o fundo para branco no hover */
+  border: 2px solid transparent; /* Adiciona uma borda transparente ao passar o mouse */
+}
+
+
   
-  .about-text p {
-    font-size: 14px;
-    font-family: 'Stratos', sans-serif;
-    color: white;
-    text-align: center; /* Centralize o texto */
+  .imgbox{
+    position: relative;
+    width: 70%;
+    
   }
-  
+
+  .imgbox img{
+    width: calc(110% - 80px );
+  }
+
+
+
+
   .back-link {
     display: flex;
     align-items: center;

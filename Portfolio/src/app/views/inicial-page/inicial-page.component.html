@@ -12,10 +12,11 @@
 
 <body>
 
+
+  <div class="conteudoPrincipal">
     <div class="navbar">
       <div class="name-container">
-        <div class="name">FRANCISCO CAMPOS COSTA</div>
-        <div class="subtitle">Editor & Director of Photography</div>
+        <img src="assets/Francisco Costa.svg" alt="Descrição da Imagem">
       </div>
     </div>
     
@@ -24,27 +25,28 @@
     <main>
       <ul class="main-nav-links">
         <li class="nav-link1">
-          <a href="/about-page" class="back-link">
-            <i class="fa-solid fa-angle-left"></i> 
-          </a>
+          <i class="fa-solid fa-angle-left"></i> 
           <a routerLink="/about-page" class="nav-text">About</a>
-        </li> 
-        <li class="nav-link2">
-          <a (click)="scroll(contacts)" class="nav-text">Contacts</a>
-          <a (click)="scroll(contacts)" class="back-link">
-            <i class="fa-solid fa-angle-down"></i> 
-          </a>
         </li>
+
+        <li class="nav-link2">
+          <a (click)="scroll(contacts)" class="nav-link"></a>
+          <div class="nav-text-container">
+            <a class="nav-text">Contacts</a>
+            <span class="back-link">
+              <i class="fa-solid fa-angle-down"></i> 
+            </span>
+          </div>
+        </li>
+
         <li class="nav-link3">
           <a routerLink="/work-page" class="nav-text">Work</a>
-          <a href="/work-page" class="back-link">
             <i class="fa-solid fa-angle-right"></i> 
-          </a>
         </li>
       </ul>
     </main>
     
-
+  </div>
 
 
     <section #contacts >
@@ -53,7 +55,7 @@
         <div id="footer_content">
           <div id="footer_contacts">
             <h1>CC.PRODS</h1>
-            <p><a href="mailto:francisco@gmail.com">francisco@gmail.com </a></p>
+            <p><a href="mailto:francisco&#64;gmail.com">francisco&#64;gmail.com</a></p>
             <p>(+351) 912345432</p>
 
             <div id="footer_social_media">

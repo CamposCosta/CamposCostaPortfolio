@@ -1,7 +1,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  background-color: black;
+  background-color: #1B1212;
   color: white;
   font-family: 'Stratos', sans-serif;
   height: 100%;
@@ -14,8 +14,8 @@ html, body {
   justify-content: space-between;
   align-items: center;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 2%;
+  margin: 0;
+  padding: 0;
 }
 
 .name-container {
@@ -32,6 +32,9 @@ html, body {
   margin-top: 1rem; /* Ajuste conforme necessário */
 }
 
+.conteudoPrincipal{
+  height: 100vh;
+}
 
 .name {
   font-size: 24px;
@@ -39,7 +42,48 @@ html, body {
   font-weight: 900;
 }
 
+.nav-link1 {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+}
 
+.nav-link1 .fa-angle-left {
+  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+.nav-link2 {
+  display: flex;
+  align-items: center;
+}
+
+.nav-link2 .nav-text-container {
+  display: flex;
+  align-items: center; /* Alinha horizontalmente */
+  position: relative;
+}
+
+.nav-link2 .back-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px; /* Ajuste vertical para posicionar abaixo de "Contacts" */
+}
+
+.nav-link3 {
+  display: flex;
+  align-items: center; /* Alinha verticalmente */
+}
+
+.nav-link3 .fa-angle-right {
+  margin-left: 5px; /* Espaçamento entre o ícone e o texto */
+}
+
+.nav-link1 a:hover,
+.nav-link2 a:hover,
+.nav-link3 a:hover {
+  cursor: pointer;
+   /* Cor quando está hover */
+}
 
 .main-nav-links {
   list-style: none;
@@ -50,9 +94,7 @@ html, body {
   align-items: center; /* Adiciona alinhamento vertical ao centro */
 }
 
-.nav-link {
-  text-align: center;
-}
+
 
 .main-nav-links .nav-text {
   text-decoration: none;
@@ -67,32 +109,13 @@ html, body {
   color: #888;
 }
 
-/* Estilos personalizados para os parágrafos (.custom-p) */
-.custom-p {
-  font-family: 'Stratos', sans-serif;
-  font-size: 12px;
-  color: #888;
-  text-align: center;
-  margin: 0;
-}
-
-/* Estilos para os spans abaixo de cada link */
-.nav-links a span {
-  font-family: 'Stratos', sans-serif;
-  font-size: 10px;
-  color: #888;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  display: none;
-}
-
-.nav-links a:hover span {
-  display: block;
+.main-nav-links a{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 22px;
 }
 
 main {
-  margin-top: 10%;
+  margin-top: 0;
   padding: 2%;
   max-width: 100%;
 }

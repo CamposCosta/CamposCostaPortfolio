@@ -39,5 +39,5 @@
 }
   
 .custom-button:hover {
-    color: cyan; /* Muda a cor do texto ao passar o mouse sobre o botão */
+    color: rgb(90, 60, 41); /* Muda a cor do texto ao passar o mouse sobre o botão */
   }

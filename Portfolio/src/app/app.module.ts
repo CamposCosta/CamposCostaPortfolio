@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { WorkPageComponent } from 'src/app/views/work-page/work-page.component';
 import { CoverPageComponent } from './views/cover-page/cover-page.component';
 import { AboutPageComponent } from './views/about-page/about-page.component';// Importe o ReactiveFormsModule
+import { DragDropModule } from '@angular/cdk/drag-drop';
+import { WorkPage2Component } from './views/work-page2/work-page2.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { AboutPageComponent } from './views/about-page/about-page.component';// 
     WorkPageComponent,
     CoverPageComponent,
     AboutPageComponent,
+    WorkPage2Component,
     
   ],
   imports: [
@@ -25,6 +28,7 @@ import { AboutPageComponent } from './views/about-page/about-page.component';// 
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
+    DragDropModule
   ],
   providers: [],
   bootstrap: [AppComponent]

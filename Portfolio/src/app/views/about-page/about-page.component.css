@@ -3,21 +3,24 @@
   body{
     overflow: hidden;
     font-family: 'Stratos', sans-serif;
-
   }
 
+  p{
+    font-family: 'Open Sans', sans-serif;
+  }
 
   .wrapper {
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 80px);
+    background-color: #010101;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Define 6 colunas iguais */
+    gap: 20px; /* Ajuste o espaçamento entre as colunas conforme necessário */
+    width: calc(100% - 120px); /* Leva em consideração a largura total da viewport e subtrai 120px de margem total (60px de cada lado) */
+    margin: 0 60px; /* Define 60px de margem à esquerda e à direita */
     justify-content: center;
     align-items: center;
-    padding: 0 6%;
     overflow: hidden;
   }
   
-
   
   @keyframes object2{
     50%{
@@ -27,48 +30,300 @@
   }
 
   .cols{
-    width: 50%;
+    width: 100%;
   }
-  .cols0{
-    width:60%;
-    z-index: 5;
-  }
-  
+
   .topline {
+    grid-row: 1; /* Move para a próxima linha */
+    grid-column: 3 / 5; /* Ocupa da primeira até a última coluna */
+    text-align: center;
     display: block;
     position: relative;
     font-size: 35px;
+    font-family: "Anton", sans-serif;
+    font-weight: 900;
+    text-decoration: underline;
     letter-spacing: 5px;
-    color: white;
+    color: #E3BD8C;
+    padding-top: 50px; /* Adiciona espaçamento acima */
+    padding-bottom: 30px; /* Adiciona espaçamento abaixo */
+  }
+
+  .cols0 {
+    
+    grid-row: 2; /* Move para a próxima linha */
+    grid-column: 2 / 6; /* Ocupa da primeira até a última coluna */
+    text-align: center;
+  }
+  
+
+  .cols1 {
+    grid-row: 3; /* Move para a próxima linha */
+    grid-column: 2 / 6; /* Ocupa da segunda até a quinta coluna */
+    text-align: center;
+    position: relative;
+  }
+  
+
+  .cols2 {
+    grid-row: 4; /* Move para a próxima linha */
+    grid-column: 1 / -1; /* Ocupa todas as colunas */
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente ao centro */
+    align-items: center; /* Alinha verticalmente ao centro */
+  }
+  
+  .cols2 img {
+    max-width: 100%; /* Ajusta a largura máxima da imagem */
+    width: 30%;
+    height: auto; /* Mantém a proporção da imagem */
+  }
+
+  .slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    height: 400px; /* Defina o tamanho desejado */
+  }
+
+  
+  .mySlides {
+    display: none;
+  }
+  
+  .mySlides:first-child {
+    display: block;
+  }
+
+  .image-transition {
+    transition: opacity 0.5s ease; /* Transição suave de opacidade durante 0.5 segundos */
+}
+
+  .cols3 {
+    grid-row: 5; /* Move para a próxima linha */
+    grid-column: 2 / 6; /* Ocupa da segunda até a quinta coluna */
+    text-align: center;
+    position: relative;
+  }
+
+  .cols3 p{
+    color: #ffffff;
+    position: relative;
+  }
+
+  .arrow-container {
+    position: relative; /* Define o posicionamento relativo para que a seta possa ser posicionada absolutamente dentro deste contêiner */
+  }
+  
+  .white-arrow {
+    position: absolute; /* Define o posicionamento absoluto para a seta */
+    left: 50%; /* Posiciona a seta horizontalmente no centro do contêiner pai */
+    bottom: -20px; /* Posiciona a seta abaixo do texto "Click me" */
+    transform: translateX(-50%); /* Move a seta 50% para a esquerda para centralizá-la horizontalmente */
+    color: white; /* Define a cor da seta como branca */
+  }
+  /*.cols3 h2 {
+    text-decoration: underline;
+    text-align: center;
+    color:white;
+    font-family: "Anton", sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    color: #E3BD8C;
+  }*/
+
+  .cols3 button {
+    margin-top: 20px;
+    margin-bottom: 80px;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+    background-color: #E3BD8C; /* Cor de fundo */
+    border: none;
+    border-radius: 25px; /* Borda arredondada */
+    padding: 15px 30px; /* Espaçamento interno */
+    cursor: pointer;
+    border: 5px solid rgba(0, 0, 0, 0.3); /* Adiciona uma borda escura para efeito 3D */
+  }
+  
+  .cols3 button:hover {
+    background-color: #dba45b; /* Cor de fundo mais escura ao passar o mouse */
+    border-color: rgba(0, 0, 0, 0.4); /* Ajusta a cor da borda ao passar o mouse */
+  }
+  
+  button:active {
+    transform: scale(0.95); /* Reduz o tamanho do botão ao clicar */
+    border-color: transparent; /* Remove a borda quando clicado */
   }
   
   
+  
+
+  .cols4 {
+    grid-row: 6; /* Move para a próxima linha */
+    grid-column: 3 / 5; /* Ocupa da segunda até a quinta coluna */
+    position: relative;
+    text-align: center;
+  }
+
+  .cols4 h3 {
+    color: #ffffff;
+    font-family: 'Open Sans',sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+
+  .rectangle {
+    grid-row: 3; /* Move para a próxima linha */
+    grid-column: 2 / 6; /* Ocupa da segunda até a quinta coluna */
+    justify-self: center; /* Centraliza horizontalmente na célula da grid */
+    width: 100%; /* Largura total */
+    height: 5px; /* Altura do retângulo */
+    background-color: #E3BD8C; /* Cor do retângulo */
+  }
+  
+  
+  .content {
+    position: relative; /* Garante que a posição do parágrafo seja relativa ao conteúdo */
+    padding-top: 20px; /* Espaço entre o retângulo superior e o texto */  
+    padding-bottom: 20px; 
+  }
+
+  
   h1 {
-    margin-top: 6%;
+    margin-top: 30px;
+    margin-bottom: 10px;
     display: block;
-    font-size: 7em;
+    font-size: 50px;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 900;
     color: white;
   }
   
   .multiText {
     text-transform: capitalize;
-    color: rgb(90, 60, 41);
-    font-size: 90%;
+    color: #ffffff;
+    font-size: 50px;
 
   }
   
   p{
-    margin-top: -50px; /* Ajuste conforme necessário */
     display: block;
-    width: 90%;
-    font-size: 1.2em;
+    font-size: 20px;
     color:white
   }
-/* Estilos para todos os botões em .btns */
-.btns button {
-  margin-top: 50px; /* Ajuste conforme necessário */
 
+  .dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  .dialog-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    text-align: center;
+  }
+  
+  .separator {
+    width: 100%;
+    height: 1px;
+    background-color: #ccc;
+    border: none;
+    margin: 20px 0;
+  }
+  
+  .underline {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+
+  .program-list {
+    list-style-type: none;
+    padding: 0;
+    text-align: center; /* Centraliza os itens horizontalmente */
+  }
+  
+  .program-list li {
+    display: block; /* Altera para bloco para que cada item fique em uma nova linha */
+    margin-bottom: 10px; /* Adiciona espaçamento entre os itens */
+    margin-left: auto; /* Alinha o item à esquerda */
+    margin-right: auto; /* Alinha o item à direita */
+    width: fit-content; /* Define a largura do item para caber no conteúdo */
+  }
+ 
+  
+  /* Estiliza os ícones */
+  .program-list li i {
+    margin-right: 10px;
+    color: #007bff; /* Cor azul */
+  }
+  
+  /* Estiliza o texto dos programas */
+  .program-list li span {
+    font-weight: bold;
+  }
+  
+  /* Altera a cor do ícone ao passar o mouse */
+  .program-list li i:hover {
+    color: #0056b3; /* Cor azul mais escura */
+  }
+
+  .additional-experience {
+    margin-top: 20px;
+    text-align: center; /* Centraliza o texto */
+  }
+  
+  .additional-experience p {
+    margin-bottom: 10px; /* Espaçamento entre os parágrafos */
+  }
+  
+  .close-button {
+    margin-top: 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .close-button:hover {
+    background-color: #0056b3;
+  }
+
+  .dialog p{
+    color: black;
+  }
+
+  .dialog h2{
+    font-family: "Anton", sans-serif;
+    letter-spacing: 2px;
+    margin-bottom: 0;
+  }
+
+  /*.underline{
+    font-weight: 900;
+  }*/
+/* Estilos para todos os botões em .btns */
+/*.btns button {
+  margin-top: 50px; 
   font-family: 'Stratos', sans-serif;
   font-weight: 700;
   border: none;
@@ -77,18 +332,17 @@
   color: #fff;
   position: absolute;
   border-radius: 15px;
-  padding: 15px 30px; /* Ajuste o padding conforme necessário */
+  padding: 15px 30px; 
   background: transparent;
-  transition: background 0.9s; /* Adiciona uma transição de 0.3 segundos para o fundo */
+  transition: background 0.9s; 
 }
-
+*/
 /* Estilos de hover para indicar que é clicável */
-.btns button:hover {
-  color: rgb(0, 0, 0); /* Muda a cor do texto ao passar o mouse */
-  background: #fff; /* Altera o fundo para branco no hover */
-  border: 2px solid transparent; /* Adiciona uma borda transparente ao passar o mouse */
-}
-
+/*.btns button:hover {
+  color: rgb(0, 0, 0); 
+  background: #fff; 
+  border: 2px solid transparent; 
+*/
 /* Estilos específicos para o botão "Download CV" */
 .cv-download-link {
   text-decoration: none; /* Remove a sublinhado padrão do link */
@@ -118,13 +372,11 @@
 
   
   .imgbox{
-    position: relative;
-    width: 70%;
-    
+    width: 100%;
   }
 
   .imgbox img{
-    width: calc(110% - 80px );
+    width: 100%;
   }
 
 
@@ -133,18 +385,25 @@
   .back-link {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Alinha à direita */
+    justify-content: center; /* Alinha horizontalmente ao centro */
     text-decoration: none;
     color: white;
-    margin-top: 1rem;
-    margin-right: 2rem;
-    position: absolute;
-    top: 50%; /* Centraliza verticalmente */
+    position: fixed;
+    top: 50%; /* Centraliza verticalmente na tela */
     transform: translateY(-50%);
-    right: 0; /* Encosta ao lado direito */
-  }
-  
-  .back-link i {
+    right: 20px; /* Ajuste conforme necessário para a distância da direita */
+    z-index: 999; /* Garante que o link fique acima de outros elementos */
+}
+
+.back-link i {
     margin-left: 0.5rem; /* Ajusta a margem para separar o ícone dos traços */
-  }
+    font-size: 30px; /* Ajuste o tamanho conforme necessário */
+    transition: color 0.3s; /* Adiciona uma transição suave de cor */
+}
+
+.back-link i:hover {
+    color: #E3BD8C; /* Define a cor desejada ao passar o mouse */
+}
+
+
   

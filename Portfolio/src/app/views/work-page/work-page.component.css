@@ -26,6 +26,23 @@
     box-shadow: 0 30px 50px #505050;
   }
 
+  .video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* para garantir que o vídeo fique atrás do conteúdo */
+    overflow: hidden; /* para garantir que o vídeo não exceda os limites do container */
+}
+
+.item .content {
+    position: relative; /* para garantir que o conteúdo fique sobre o vídeo */
+    z-index: 1;
+    /* adicione outros estilos conforme necessário */
+}
+
 
   .item:nth-child(1),
   .item:nth-child(2){

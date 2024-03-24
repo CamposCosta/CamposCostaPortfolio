@@ -13,37 +13,78 @@
 
 <body>
 
+  
   <div class="wrapper">
+    <span class="topline">ABOUT ME</span>
+    
     <div class="cols cols0">
-      <span class="topline">Hello from</span>
       <h1><span class= "multiText">a Cinematographer</span></h1>
-      <p>Lorem fdvbhujfdivgdugbcyhs chsu kkkkkkkkkj hhhhhh hhhhh hhh hhhh hhhhhh hhhhh hhh cccccccccccccccccccccccccccc fffffffffff ffffff fffffffff ffff ggg ggggg gggg gggg agbyhvuif dbsyu </p>
-     
-      <div class="btns">
-        <a href="./caminho/para/seu_cv.pdf" download class="cv-download-link">
-          <button>Download CV</button>
-        </a>
-      </div>
-
     </div>  
     <div class="cols cols1">
-      <div class="imgbox">
-        <img src="./assets/camposCosta.png" alt="User Image">
-      </div>      
-    </div>
+      <div class="rectangle top"></div>
+      <div class="content">
+        <p>My name is Francisco Costa, I have an Associates Degree in Broadcast Media Communications and I am currently pursuing a Bachelors of Fine Arts in Film and Media.</p>
+      </div>
+      <div class="rectangle bottom"></div>
+    </div>  
+
+    <div class="cols cols2 slideshow-container">
+      <img *ngFor="let image of images; let i = index" 
+           [src]="image" 
+           [alt]="altDescriptions[i]" 
+           [style.display]="i === currentIndex ? 'block' : 'none'"
+           (error)="handleImageError(i)"
+           class="image-transition">
   </div>
   
- 
+
+    <div class="cols cols3">
+      <div class="arrow-container">
+        <p>click me</p>
+        <i class="fas fa-chevron-down white-arrow"></i>
+      </div>
+      <button (click)="openDialog()">
+        CHECK MY SKILLS
+      </button>
+    </div>
+    
+    <div *ngIf="showDialog" class="dialog" id="draggable-dialog" cdkDrag>
+      <!-- Conteúdo do diálogo -->
+      <div class="dialog-content">
+          <h2>MY EXPERIENCE</h2>
+          <hr class="separator">
+          <p class="underline">I have experience with:</p>
+          <ul class="program-list">
+              <li><i class="fas fa-check-circle"></i> DaVinci Resolve</li>
+              <li><i class="fas fa-check-circle"></i> Adobe Premiere</li>
+              <li><i class="fas fa-check-circle"></i> Final Cut Pro</li>
+              <li><i class="fas fa-check-circle"></i> Avid Media Composer</li>
+          </ul>
+          <div class="additional-experience">
+              <p>I have worked in a Broadcast set as a <span style="font-weight: bold;">Director</span>, <span style="font-weight: bold;">Technical Director</span>, and <span style="font-weight: bold;">Sound Mixer</span>.</p>
+              <p>I also have experience on film sets as a <span style="font-weight: bold;">Director</span>, <span style="font-weight: bold;">Cinematographer</span>, <span style="font-weight: bold;">Production Assistant</span>, <span style="font-weight: bold;">Audio Mixing</span>, and <span style="font-weight: bold;">Gaffer</span>.</p>
+          </div>
+          <button class="close-button" (click)="closeDialog()">Close</button>
+      </div>
+  </div>
   
+
+    <!--<h3>
+        I have experience with: 
+      </h3>
+    </div>-->
+
+   <!-- <div class="btns">
+      <a href="./caminho/para/seu_cv.pdf" download class="cv-download-link">
+        <button>Download CV</button>
+      </a>
+    </div>
+    -->
+  </div>
   
-
-
-
-
-
-          <a href="/inicial-page" class="back-link">
-            <i class="fa-solid fa-angle-right"></i> 
-          </a>
+ <a href="/inicial-page" class="back-link">
+    <i class="fa-solid fa-angle-right"></i> 
+ </a>
   
 
 </body>

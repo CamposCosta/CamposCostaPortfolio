@@ -19,6 +19,49 @@ export class InicialPageComponent {
     });
   }
 
+  // Adicione as funções slideIconLeft() e slideIconRight() aqui
+  slideIconLeft() {
+    const icon = document.getElementById('icon');
+    if (icon) {
+      icon.style.left = '-20px';
+    }
+  }
+
+  slideIconRight() {
+    const icon = document.getElementById('icon');
+    if (icon) {
+      icon.style.left = '-10px';
+    }
+  }
+
+  slideIconLeft3() {
+    const icon = document.getElementById('icon3');
+    if (icon) {
+      icon.style.right = '195px';
+    }
+  }
+
+  slideIconRight3() {
+    const icon = document.getElementById('icon3');
+    if (icon) {
+      icon.style.right = '205px';
+    }
+  }
+
+  slideIconDown() {
+    const icon = document.getElementById('icon2');
+    if (icon) {
+      icon.style.top = '-10px';
+    }
+  }
+
+  slideIconUp() {
+    const icon = document.getElementById('icon2');
+    if (icon) {
+      icon.style.top = '-20px';
+    }
+  }
+
 
   sendEmail() {
     if (this.emailForm.valid) {

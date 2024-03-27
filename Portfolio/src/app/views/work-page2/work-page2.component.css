@@ -3,24 +3,30 @@
   flex-direction: column;
   align-items: center;
   background-color: aqua;
+  height: 100vh;
 }
 
 #slide {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Espaço uniforme entre os itens */
+  align-items: center; /* Centraliza verticalmente */
+  flex-wrap: wrap; /* Permite que os itens quebrem para a próxima linha */
   width: 100%;
-  margin-top: 50px;
+  height: 100vh; /* Defina a altura do contêiner pai, aqui é usada 100% da altura da janela */
 }
 
 .item {
   flex: 1;
-  height: 200px; /* Altura ajustada para serem alinhados */
+  height: 100px; /* Altura ajustada para serem alinhados */
   display: flex;
   justify-content: center;
   align-items: center;
   background-size: cover;
   background-position: center;
-  margin: 0 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .content {
@@ -28,6 +34,38 @@
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.8);
 }
+
+.item:nth-child(2) {
+  height: 360px; /* Defina a altura desejada para o segundo retângulo */
+  margin-left: 0px;
+  margin-right: 0px;
+  flex: 1.1;
+}
+
+.item:nth-child(1) {
+  height: 250px; /* Defina a altura desejada para o segundo retângulo */
+  margin-left: 300px;
+  margin-right: 90px;
+  flex: 0.8;
+}
+.item:nth-child(3) {
+  height: 250px; /* Defina a altura desejada para o segundo retângulo */
+  margin-right: 300px;
+  margin-left: 90px;
+  flex: 0.8;
+}
+
+.item:nth-child(1) .content {
+  height: 100%; /* Ajusta a altura do conteúdo para ocupar toda a altura do retângulo */
+}
+.item:nth-child(2) .content {
+  height: 100%; /* Ajusta a altura do conteúdo para ocupar toda a altura do retângulo */
+}
+.item:nth-child(3) .content {
+  height: 100%; /* Ajusta a altura do conteúdo para ocupar toda a altura do retângulo */
+}
+
+
 
 .name {
   font-size: 24px;
@@ -39,9 +77,6 @@
   margin-top: 10px;
 }
 
-.buttons {
-  margin-top: 20px;
-}
 
 .buttons button {
   margin-right: 10px;
@@ -54,3 +89,37 @@
   font-size: 24px;
   color: black;
 }
+
+.buttons{
+  margin-top: 80px;
+  background-color: transparent;
+}
+
+.button-prev {
+  position: absolute;
+  left: calc(50% - 550px); /* Ajuste conforme necessário */
+  top: calc(50% - 15px); /* Ajuste conforme necessário */
+}
+
+.button-next {
+  position: absolute;
+  right: calc(50% - 550px); /* Ajuste conforme necessário */
+  top: calc(50% - 15px); /* Ajuste conforme necessário */
+}
+
+
+.buttons button {
+  background-color: transparent; /* Cor de fundo */
+  border: none;
+  color: white;
+  font-size: 50px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.buttons button:hover {
+  color: black; /* Cor de fundo ao passar o mouse */
+}
+
+
+

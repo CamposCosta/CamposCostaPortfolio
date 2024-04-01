@@ -11,6 +11,7 @@ import { CoverPageComponent } from './views/cover-page/cover-page.component';
 import { AboutPageComponent } from './views/about-page/about-page.component';// Importe o ReactiveFormsModule
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { WorkPage2Component } from './views/work-page2/work-page2.component';
+import { WorkPage3Component } from './views/work-page3/work-page3.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { WorkPage2Component } from './views/work-page2/work-page2.component';
     CoverPageComponent,
     AboutPageComponent,
     WorkPage2Component,
+    WorkPage3Component,
     
   ],
   imports: [

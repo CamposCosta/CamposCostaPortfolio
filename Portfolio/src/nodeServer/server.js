@@ -1,13 +1,13 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const { sendEmail } = require('./email-service');
-const cors = require('cors'); // Importe o pacote 'cors'.
+const cors = require('cors'); 
 
 const app = express();
 app.use(bodyParser.json());
 
 const corsOptions = {
-  origin: 'http://localhost:4200', // Substitua pelo endereço do seu aplicativo Angular.
+  origin: 'http://localhost:4200', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   optionsSuccessStatus: 204,
 };

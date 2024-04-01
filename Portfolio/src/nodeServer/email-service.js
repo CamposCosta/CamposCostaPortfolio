@@ -1,6 +1,14 @@
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
-dotenv.config({ path: "process.env" });
+const path = require('path');
+
+// Especifica o caminho absoluto para o arquivo .env
+const envPath = path.resolve(__dirname, 'process.env');
+dotenv.config({ path: envPath });
+console.log(envPath);
+
+console.log(process.env.EMAIL_USER);
+console.log(process.env.EMAIL_PASS);
 
 const transporter = nodemailer.createTransport({
   host: 'smtp.gmail.com',

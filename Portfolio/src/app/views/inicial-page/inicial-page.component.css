@@ -164,12 +164,14 @@ footer {
   color: #000000;
   margin: 0;
   margin-top: 80px;
+  text-align: center;
 }
 
 #footer_content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  padding: 5%;
+  display: flex;
+  flex-direction: column; /* Coloca os elementos um embaixo do outro */
+  align-items: center; /* Centraliza os elementos horizontalmente */
+  padding: 2%;
 }
 
 #footer_contacts h1 {
@@ -197,6 +199,7 @@ footer {
   display: flex;
   gap: 2rem;
   margin-top: 1.5rem;
+margin-left: 1.5rem;
 }
 
 #footer_social_media .footer-link {
@@ -229,7 +232,7 @@ footer {
 .footer-list .footer-link {
   color: rgb(179, 177, 177);
 }
-
+/* 
 #footer_subscribe {
   display: flex;
   flex-direction: column;
@@ -285,7 +288,7 @@ footer {
 #footer_contacts p a:hover,
 #footer_social_media .footer-link:hover {
   opacity: 0.7;
-}
+} */
 
 #footer_copyright {
   font-family: 'Stratos', sans-serif;

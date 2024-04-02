@@ -23,9 +23,9 @@ const transporter = nodemailer.createTransport({
 function sendEmail(name, email, message) {
   const mailOptions = {
     from: process.env.EMAIL_USER,
-    to:'andre.rangel.ferreira.123@gmail.com',
+    //to:'andre.rangel.ferreira.123@gmail.com',
     //to:'fc8650@gmail.com', //email do costa onde vai receber a mensagem
-    // to: 'martaaferreiraa14@gmail.com',
+    to: 'martaaferreiraa14@gmail.com',
     subject: 'Contato do Portfólio',
     text: `Nome: ${name}\nEmail: ${email}\nMensagem: ${message}`,
   };

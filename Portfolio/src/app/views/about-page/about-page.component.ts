@@ -48,7 +48,7 @@ export class AboutPageComponent implements AfterViewInit {
 
   private setupTypedEffect() {
     const options = {
-      strings: ["An Editor.", "A Camera Operator.", "A Production assistant.", "A Diretor of photography."],
+      strings: ["A Diretor of photography.", "A Director and Production Assistant"],
       typeSpeed: 100,
       backSpeed: 80,
       backDelay: 1500,

@@ -66,19 +66,16 @@ html, body {
 .nav-link1 {
   display: flex;
   align-items: center; /* Alinha verticalmente */
-  position: relative;
 }
 
 #icon {
-  position: absolute;
-  left: -10px; /* Ajuste este valor conforme necessário */
-  transition: left 0.3s ease; /* Adiciona uma transição suave para o efeito de deslizamento */
+  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+  transition: transform 0.3s ease; /* Adiciona uma transição suave para o efeito de deslizamento */
 }
 
 #icon3 {
-  position: absolute;
-  right: 205px; /* Ajuste este valor conforme necessário */
-  transition: right 0.3s ease; /* Adiciona uma transição suave para o efeito de deslizamento */
+  margin-left: 5px; /* Espaçamento entre o ícone e o texto */
+  transition: transform 0.3s ease;  /* Adiciona uma transição suave para o efeito de deslizamento */
 }
 
 #icon2 {
@@ -116,9 +113,6 @@ html, body {
   align-items: center; /* Alinha verticalmente */
 }
 
-.nav-link3 .fa-angle-right {
-  margin-left: 5px; /* Espaçamento entre o ícone e o texto */
-}
 
 .nav-link1 a:hover,
 .nav-link2 a:hover,
@@ -303,10 +297,71 @@ footer {
   text-align: center;
 }
 
-@media screen and (max-width: 426px) {
-  #footer_content {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 3rem 2rem;
+.icon-margin-left {
+  margin-left: 15px;
+  vertical-align: middle;
+}
+
+
+@media screen and (max-width: 768px) {
+    /* Estilos para dispositivos menores que 768px */
+    .name {
+        font-size: 20px;
+    }
+    
+    .spinner img {
+        width: 200px;
+        margin-top: -60px;
+    }
+
+    .name-container img{
+      width: 320px;
+      margin-bottom: 50px;
+    }
+
+    .main-nav-links {
+      flex-direction: column; /* Empilha os itens verticalmente */
+    }
+
+    .main-nav-links a{
+      margin-bottom: 20px;
+    }
+
+    #icon,
+    #icon2,
+    #icon3 {
+        display: none; /* Oculta as setas */
+    }
+
+    #footer_content {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 3rem 2rem;
+    }
+
+    #footer_contacts {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza o conteúdo horizontalmente */
+      justify-content: center; /* Centraliza o conteúdo verticalmente */
+      text-align: center; /* Centraliza o texto dentro dos elementos */
+      height: 100%; /* Opcional, ajuste conforme necessário */
   }
+
+    
+    /* Mais estilos responsivos */
+}
+
+@media screen and (max-width: 426px) {
+    /* Estilos para dispositivos menores que 426px */
+    .name {
+        font-size: 18px;
+    }
+    
+    .spinner img {
+        width: 120px;
+        margin-top: -50px;
+    }
+    
+    /* Mais estilos responsivos */
 }
 

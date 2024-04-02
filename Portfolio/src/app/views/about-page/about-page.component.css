@@ -405,5 +405,28 @@
     color: #E3BD8C; /* Define a cor desejada ao passar o mouse */
 }
 
+@media screen and (max-width: 768px) {
+    .slideshow-container{
+      height: 250px;
+    }
+
+    .slideshow-container img{
+      width: 90%;
+    }
+
+    .multiText {
+      font-size: 30px; /* Ou o tamanho que você preferir para telas menores */
+    }
+
+    .cols1 {
+      grid-column: 1 / 7;
+    }
+
+    .topline {
+      grid-column: 2 / 6;
+    }
+}
+
+
 
   

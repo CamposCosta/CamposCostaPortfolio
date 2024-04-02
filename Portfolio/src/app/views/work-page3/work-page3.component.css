@@ -223,3 +223,61 @@ button[data-youtube-link]:hover {
 .back-link i:hover {
   color: #E3BD8C; /* Define a cor desejada ao passar o mouse */
 }
+
+
+@media screen and (max-width: 768px) {
+  #slide {
+      width: 100%; /* Define a largura para ocupar toda a largura disponível */
+      overflow-x: auto; /* Adicionado para permitir rolagem horizontal em dispositivos menores */
+  }
+
+  .item {
+      width: 80%; /* Reduz a largura do item para caber na tela */
+      height: auto; /* Permite que a altura seja ajustada automaticamente */
+      margin: 10px auto; /* Centraliza os itens na tela e adiciona um espaçamento entre eles */
+  }
+
+  .item .content {
+      left: 10px; /* Ajusta a posição do conteúdo */
+      width: calc(100% - 20px); /* Ajusta a largura do conteúdo */
+  }
+
+  .item .name {
+      font-size: 20px; /* Reduz o tamanho da fonte do nome do item */
+  }
+
+  .item .des {
+      font-size: 16px; /* Reduz o tamanho da fonte da descrição do item */
+  }
+
+  .item button {
+      font-size: 14px; /* Reduz o tamanho da fonte do botão */
+      padding: 8px 16px; /* Ajusta o padding do botão */
+  }
+
+  .buttons {
+      padding: 10px 0; /* Ajusta o espaçamento dos botões */
+  }
+
+  .buttons button {
+      font-size: 16px; /* Reduz o tamanho da fonte dos botões de navegação */
+      width: 40px; /* Reduz a largura dos botões de navegação */
+      height: 40px; /* Reduz a altura dos botões de navegação */
+      margin: 0 5px; /* Ajusta a margem entre os botões de navegação */
+  }
+
+  .back-link {
+      margin-left: 1rem; /* Reduz a margem do link de volta */
+  }
+
+  .back-link i {
+      font-size: 24px; /* Ajusta o tamanho da fonte do ícone do link de volta */
+  }
+
+  .back-link[_ngcontent-ng-c863998932] {
+    top: auto; /* Remova o top: 50%; e defina como auto */
+    transform: translateY(0); /* Remova o translateY(-50%); e defina como translateY(0); */
+  }
+
+  
+}

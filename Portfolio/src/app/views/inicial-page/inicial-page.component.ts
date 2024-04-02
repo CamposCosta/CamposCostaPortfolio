@@ -23,30 +23,30 @@ export class InicialPageComponent {
   slideIconLeft() {
     const icon = document.getElementById('icon');
     if (icon) {
-      icon.style.left = '-20px';
+      (icon as HTMLElement).style.transform = 'translateX(-10px)';
     }
   }
 
   slideIconRight() {
     const icon = document.getElementById('icon');
     if (icon) {
-      icon.style.left = '-10px';
+      (icon as HTMLElement).style.transform = 'translateX(0px)';
     }
   }
 
   slideIconLeft3() {
     const icon = document.getElementById('icon3');
     if (icon) {
-      icon.style.right = '195px';
+        (icon as HTMLElement).style.transform = 'translateX(10px)';  // Move o ícone para a direita
     }
-  }
+}
 
-  slideIconRight3() {
+slideIconRight3() {
     const icon = document.getElementById('icon3');
     if (icon) {
-      icon.style.right = '205px';
+        (icon as HTMLElement).style.transform = 'translateX(0px)';  // Volta o ícone à posição original
     }
-  }
+}
 
   slideIconDown() {
     const icon = document.getElementById('icon2');

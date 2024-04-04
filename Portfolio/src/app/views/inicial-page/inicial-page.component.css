@@ -350,6 +350,10 @@ margin-left: 1.5rem;
       height: 100%; /* Opcional, ajuste conforme necessário */
   }
 
+  .conteudoPrincipal{
+    height: 100%;
+  }
+
     
     /* Mais estilos responsivos */
 }

@@ -6,21 +6,17 @@ import { AppComponent } from './app.component';
 import { InicialPageComponent } from 'src/app/views/inicial-page/inicial-page.component';
 import { ReactiveFormsModule } from '@angular/forms'; // Importe o ReactiveFormsModule
 import { FormsModule } from '@angular/forms';
-import { WorkPageComponent } from 'src/app/views/work-page/work-page.component';
 import { CoverPageComponent } from './views/cover-page/cover-page.component';
 import { AboutPageComponent } from './views/about-page/about-page.component';// Importe o ReactiveFormsModule
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { WorkPage2Component } from './views/work-page2/work-page2.component';
 import { WorkPage3Component } from './views/work-page3/work-page3.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicialPageComponent,
-    WorkPageComponent,
     CoverPageComponent,
     AboutPageComponent,
-    WorkPage2Component,
     WorkPage3Component,
     
   ],

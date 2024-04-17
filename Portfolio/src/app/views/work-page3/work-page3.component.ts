@@ -45,24 +45,42 @@ export class WorkPage3Component implements AfterViewInit {
   }
 
   private updateVideoVisibility() {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+  
+    // Obtém todos os itens
     const items = document.querySelectorAll('.item');
+  
+    // Processa cada item
     items.forEach((item, index) => {
       const video = item.querySelector('video') as HTMLVideoElement | null;
-      
-      if (video) {
-        if (index === 1) {
-          video.currentTime = 0;  // Reinicia o vídeo para o início
-          video.play();  // Inicia a reprodução do vídeo
-          video.setAttribute('style', 'display: block;');  // Exibe o vídeo
-          item.classList.add('hide-background');  // Adiciona a classe para ocultar a imagem de fundo
-        } else {
-          video.pause();  // Pausa o vídeo
-          video.setAttribute('style', 'display: none;');  // Oculta o vídeo
-          item.classList.remove('hide-background');  // Remove a classe para exibir a imagem de fundo
+  
+      // Se estiver em um dispositivo móvel, sempre pausa e esconde os vídeos
+      if (isMobile) {
+        if (video) {
+          video.pause();
+          video.style.display = 'none';
+        }
+        item.classList.remove('hide-background');
+      }
+      // Caso contrário, usa a lógica para desktop
+      else {
+        if (video) {
+          if (index === 1) { // Index é baseado na sua lógica de carrossel. Certifique-se de que 1 é o índice correto para o vídeo atualmente visível.
+            video.currentTime = 0;
+            video.play();
+            video.style.display = 'block';
+            item.classList.add('hide-background');
+          } else {
+            video.pause();
+            video.style.display = 'none';
+            item.classList.remove('hide-background');
+          }
         }
       }
     });
   }
+  
+  
   
   
   
